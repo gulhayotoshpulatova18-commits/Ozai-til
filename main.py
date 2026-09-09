@@ -53,13 +53,13 @@ def matnni_tekshirish(matn: str) -> Dict[str, Any]:
         if len(soz.strip(".,!?;:()[]{}\"'«»")) >= 12
     ]
 
-    natija_ma'lumoti = natija(
+    natija_malumoti = natija(
         matn,
         "tahlil qilindi",
         0.75,
     )
 
-    natija_ma'lumoti.update(
+    natija_malumoti.update(
         {
             "belgilar_soni": belgilar_soni,
             "sozlar_soni": sozlar_soni,
@@ -73,7 +73,7 @@ def matnni_tekshirish(matn: str) -> Dict[str, Any]:
         }
     )
 
-    return natija_ma'lumoti
+    return natija_malumoti
 
 
 def tahlil_qil(matn: str) -> Dict[str, Any]:
@@ -120,14 +120,14 @@ def asosiy():
             print("Iltimos, matn kiriting.")
             continue
 
-        natija_ma'lumoti = tahlil_qil(matn)
+        natija_malumoti = tahlil_qil(matn)
 
         print("\n--- TAHLIL NATIJASI ---")
-        print(f"Sozlar soni: {natija_ma'lumoti['sozlar_soni']}")
-        print(f"Gaplar soni: {natija_ma'lumoti['gaplar_soni']}")
+        print(f"Sozlar soni: {natija_malumoti['sozlar_soni']}")
+        print(f"Gaplar soni: {natija_malumoti['gaplar_soni']}")
         print(
             "Ishonchlilik: "
-            f"{natija_ma'lumoti['ishonchlilik'] * 100:.1f}%"
+            f"{natija_malumoti['ishonchlilik'] * 100:.1f}%"
         )
 
 
