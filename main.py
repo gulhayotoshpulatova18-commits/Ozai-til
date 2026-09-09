@@ -36,7 +36,7 @@ def matnni_tekshirish(matn: str) -> Dict[str, Any]:
     if not matn:
         return natija("", "bo‘sh matn", 1.0)
 
-    so‘zlar = matn.split()
+    sozlar = matn.split()
     gaplar = [
         gap.strip()
         for gap in matn.replace("!", ".").replace("?", ".").split(".")
@@ -44,13 +44,13 @@ def matnni_tekshirish(matn: str) -> Dict[str, Any]:
     ]
 
     belgilar_soni = len(matn)
-    so‘zlar_soni = len(so‘zlar)
+    sozlar_soni = len(sozlar)
     gaplar_soni = len(gaplar)
 
-    uzun_so‘zlar = [
-        so‘z.strip(".,!?;:()[]{}\"'«»")
-        for so‘z in so‘zlar
-        if len(so‘z.strip(".,!?;:()[]{}\"'«»")) >= 12
+    uzun_sozlar = [
+        soz.strip(".,!?;:()[]{}\"'«»")
+        for soz in sozlar
+        if len(soz.strip(".,!?;:()[]{}\"'«»")) >= 12
     ]
 
     natija_ma'lumoti = natija(
@@ -62,12 +62,12 @@ def matnni_tekshirish(matn: str) -> Dict[str, Any]:
     natija_ma'lumoti.update(
         {
             "belgilar_soni": belgilar_soni,
-            "so‘zlar_soni": so‘zlar_soni,
+            "sozlar_soni": sozlar_soni,
             "gaplar_soni": gaplar_soni,
-            "uzun_so‘zlar": uzun_so‘zlar,
+            "uzun_sozlar": uzun_sozlar,
             "tahlil": {
                 "matn_mavjud": True,
-                "so‘zlar_mavjud": so‘zlar_soni > 0,
+                "sozlar_mavjud": sozlar_soni > 0,
                 "gaplar_mavjud": gaplar_soni > 0,
             },
         }
@@ -123,7 +123,7 @@ def asosiy():
         natija_ma'lumoti = tahlil_qil(matn)
 
         print("\n--- TAHLIL NATIJASI ---")
-        print(f"So‘zlar soni: {natija_ma'lumoti['so‘zlar_soni']}")
+        print(f"Sozlar soni: {natija_ma'lumoti['sozlar_soni']}")
         print(f"Gaplar soni: {natija_ma'lumoti['gaplar_soni']}")
         print(
             "Ishonchlilik: "
