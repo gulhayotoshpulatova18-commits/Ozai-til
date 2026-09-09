@@ -6,3 +6,4 @@ def test_matnni_tekshirish():
     assert isinstance(natija, dict)
     assert "so'zlar_soni" in natija
     assert "gaplar_soni" in natija
+    
