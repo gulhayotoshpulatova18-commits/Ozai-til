@@ -326,13 +326,12 @@ small{color:#667085}
 <div class="card">
 <h2>Umumiy natija</h2>
 <div class="grid">
-<div class="stat"><b>{{natija.statistika.so'zlar_soni}}</b><br>So'zlar</div>
+<div class="stat"><b>{{natija.statistika["so'zlar_soni"]}}</b><br>So'zlar</div>
 <div class="stat"><b>{{natija.statistika.gaplar_soni}}</b><br>Gaplar</div>
-<div class="stat"><b>{{natija.statistika.noyob_so'zlar}}</b><br>Noyob so'zlar</div>
+
 <div class="stat"><b>{{natija.ishonchlilik.foiz}}%</b><br>Ishonchlilik</div>
 </div>
 </div>
-
 <div class="card">
 <h2>Insho / matn bahosi</h2>
 <p><b>{{natija.insho_bahosi.ball}} / 100</b> — {{natija.insho_bahosi.daraja}}</p>
