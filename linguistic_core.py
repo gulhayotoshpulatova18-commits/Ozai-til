@@ -328,7 +328,7 @@ small{color:#667085}
 <div class="grid">
 <div class="stat"><b>{{natija.statistika["so'zlar_soni"]}}</b><br>So'zlar</div>
 <div class="stat"><b>{{natija.statistika.gaplar_soni}}</b><br>Gaplar</div>
-
+{{natija.statistika["noyob_so'zlar"]}}
 <div class="stat"><b>{{natija.ishonchlilik.foiz}}%</b><br>Ishonchlilik</div>
 </div>
 </div>
@@ -382,7 +382,7 @@ small{color:#667085}
 <p>
 <b>{{x.gap}}-gap:</b> {{x.matn}}<br>
 So'zlar: {{x.so'zlar_soni}} ·
-Fe'llar: {{x.fe'llar|join(", ") if x.fe'llar else "aniqlanmadi"}}<br>
+Fe'llar: {{x["fe'llar"]|join(", ") if x["fe'llar"] else "aniqlanmadi"}}
 <small>{{x.izoh}}</small>
 </p>
 {% endfor %}
@@ -391,7 +391,7 @@ Fe'llar: {{x.fe'llar|join(", ") if x.fe'llar else "aniqlanmadi"}}<br>
 <div class="card">
 <h2>Takroriy so'zlar</h2>
 {% if natija.takroriy_so'zlar %}
-{% for x in natija.takroriy_so'zlar %}
+{% for x in natija["takroriy_so'zlar"] %}
 {{x.so'z}} ({{x.soni}} marta) ·
 {% endfor %}
 {% else %}
