@@ -7,7 +7,7 @@ import re
 from collections import Counter
 from flask import Flask, request, render_template_string, jsonify
 
-app = Flask(name)
+app = Flask(__name__)
 
 MUALLIF = "Gulhayo Toshpulatova"
 VERSIYA = "V2.0"
@@ -430,5 +430,5 @@ def api_tahlil():
         return jsonify({"xato": "Matn kiritilmagan."}), 400
  return jsonify(full_analysis(matn))
 
-if name == "main":
+if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=False)
