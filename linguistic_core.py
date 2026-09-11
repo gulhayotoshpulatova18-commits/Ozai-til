@@ -6,7 +6,7 @@ except ImportError:
     from main import tahlil_qil as matnni_tekshirish
 
 
-app = Flask(name)
+app = Flask(_name_)
 
 MUALLIF = "Gulhayo Toshpulatova"
 VERSIYA = "V1.8.1575"
@@ -352,7 +352,7 @@ def bosh_sahifa():
     )
 
 
-if name == "main":
+if name == "_main_":
 
     app.run(
         host="0.0.0.0",
