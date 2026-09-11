@@ -1,4 +1,4 @@
- # O'zbek tili AI — ko'p funksiyali lingvistik tahlil tizimi
+# O'zbek tili AI — ko'p funksiyali lingvistik tahlil tizimi
 # Muallif: Gulhayo Toshpulatova
 # Versiya: V2.0
 # Talab: Flask
@@ -149,6 +149,7 @@ def word_analysis(text):
             "o'zak": w[:root_len] if root_len > 0 else w
         })
     return out
+
 def spelling_errors(text):
     errors = []
     for m in re.finditer(
@@ -284,6 +285,7 @@ def full_analysis(text):
         "insho_bahosi": essay_score(text),
         "ishonchlilik": confidence(text, wa)
     }
+
 SAHIFA = r"""
 <!doctype html>
 <html lang="uz">
@@ -428,7 +430,8 @@ def api_tahlil():
 
     if not matn:
         return jsonify({"xato": "Matn kiritilmagan."}), 400
- return jsonify(full_analysis(matn))
+
+    return jsonify(full_analysis(matn))
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=False)
