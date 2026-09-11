@@ -1,4 +1,4 @@
-[9/12/2026 2:35 AM] Toshpulatova Gulhayo: # O'zbek tili AI — ko'p funksiyali lingvistik tahlil tizimi
+ # O'zbek tili AI — ko'p funksiyali lingvistik tahlil tizimi
 # Muallif: Gulhayo Toshpulatova
 # Versiya: V2.0
 # Talab: Flask
@@ -149,7 +149,7 @@ def word_analysis(text):
             "o'zak": w[:root_len] if root_len > 0 else w
         })
     return out
-[9/12/2026 2:35 AM] Toshpulatova Gulhayo: def spelling_errors(text):
+ def spelling_errors(text):
     errors = []
     for m in re.finditer(
         r"\b[A-Za-zА-Яа-яЁёЎўҚқҒғҲҳЗзʼ'‘’ʻ\-]+\b",
@@ -428,7 +428,7 @@ def api_tahlil():
 
     if not matn:
         return jsonify({"xato": "Matn kiritilmagan."}), 400
-[9/12/2026 2:35 AM] Toshpulatova Gulhayo: return jsonify(full_analysis(matn))
+ return jsonify(full_analysis(matn))
 
 if name == "main":
     app.run(host="0.0.0.0", port=5000, debug=False)
