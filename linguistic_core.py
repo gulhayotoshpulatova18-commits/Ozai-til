@@ -284,7 +284,7 @@ def full_analysis(text):
         "insho_bahosi": essay_score(text),
         "ishonchlilik": confidence(text, wa)
     }
-[9/12/2026 2:35 AM] Toshpulatova Gulhayo: SAHIFA = r"""
+ SAHIFA = r"""
 <!doctype html>
 <html lang="uz">
 <head>
