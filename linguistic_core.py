@@ -148,8 +148,8 @@ def word_analysis(text):
             "qo'shimchalar": sf,
             "o'zak": w[:root_len] if root_len > 0 else w
         })
-    return out
- def spelling_errors(text):
+         return out
+def spelling_errors(text):
     errors = []
     for m in re.finditer(
         r"\b[A-Za-zА-Яа-яЁёЎўҚқҒғҲҳЗзʼ'‘’ʻ\-]+\b",
