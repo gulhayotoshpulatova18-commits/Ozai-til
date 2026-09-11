@@ -1,4 +1,4 @@
-[9/12/2026 1:51 AM] Toshpulatova Gulhayo: from flask import Flask, request, render_template_string
+from flask import Flask, request, render_template_string
 
 try:
     from main import matnni_tekshirish
@@ -196,7 +196,7 @@ SAHIFA = """
         <h2>📊 Tahlil natijasi</h2>
 
         {% if natija.get("xato") %}
-[9/12/2026 1:51 AM] Toshpulatova Gulhayo: <div class="xato">
+<div class="xato">
                 {{ natija["xato"] }}
             </div>
 
