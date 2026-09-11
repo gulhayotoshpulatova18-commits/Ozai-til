@@ -284,7 +284,7 @@ def full_analysis(text):
         "insho_bahosi": essay_score(text),
         "ishonchlilik": confidence(text, wa)
     }
- SAHIFA = r"""
+SAHIFA = r"""
 <!doctype html>
 <html lang="uz">
 <head>
